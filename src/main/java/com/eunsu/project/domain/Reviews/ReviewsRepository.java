@@ -1,4 +1,6 @@
 package com.eunsu.project.domain.Reviews;
 
-public interface ReviewsRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ReviewsRepository extends JpaRepository<Reviews, Long> {
 }
