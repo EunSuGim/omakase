@@ -1,2 +1,4 @@
-package com.eunsu.project.domain.Reviews;public class Reviews {
+package com.eunsu.project.domain.Reviews;
+
+public class Reviews {
 }
