@@ -1,4 +1,4 @@
-package com.eunsu.project.domain.Reviews;
+package com.eunsu.project.domain.Review;
 
 import com.eunsu.project.domain.BaseTimeEntity;
 import lombok.Builder;
@@ -11,7 +11,7 @@ import java.util.Objects;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Reviews extends BaseTimeEntity {
+public class Review extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,16 +20,12 @@ public class Reviews extends BaseTimeEntity {
     @Column(nullable = false)
     float grade;
 
-    @Column(nullable = false)
-    int userId;
-
     @Column(nullable = false, length = 300)
     String contents;
 
     @Builder
-    public Reviews (float grade, int userId, String contents){
+    public Review(float grade, int userId, String contents){
         if(Objects.isNull(grade)) this.grade = grade;
-        if(Objects.isNull(userId)) this.userId = userId;
         if(Objects.isNull(contents)) this.contents = contents;
     }
 

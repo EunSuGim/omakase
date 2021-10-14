@@ -1,4 +1,4 @@
-package com.eunsu.project.domain.Users;
+package com.eunsu.project.domain.User;
 
 
 import lombok.Builder;
@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Users
+public class User
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +32,7 @@ public class Users
     private String profile;
 
     @Builder
-    public Users(String email, String password, String nickname, String address, String profile){
+    public User(String email, String password, String nickname, String address, String profile){
         this.email = email;
         this.password = password;
         this.nickname = nickname;

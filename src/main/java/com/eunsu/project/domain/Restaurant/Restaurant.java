@@ -1,7 +1,7 @@
-package com.eunsu.project.domain.Restaurants;
+package com.eunsu.project.domain.Restaurant;
 
 
-import com.eunsu.project.domain.Reviews.Reviews;
+import com.eunsu.project.domain.Review.Review;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +12,7 @@ import java.util.Objects;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Restaurants {
+public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -46,12 +46,12 @@ public class Restaurants {
 
     @ManyToOne
     @JoinColumn
-    private Reviews reviewsId;
+    private Review reviewsId;
 
 
     @Builder
-    public Restaurants(int numbering, String name, String address, String tellNumber, boolean parking, String scale,
-                       String holiday, String openingDay, String openingHour, Reviews reviewsId){
+    public Restaurant(int numbering, String name, String address, String tellNumber, boolean parking, String scale,
+                      String holiday, String openingDay, String openingHour, Review reviewsId){
         if(!Objects.isNull(numbering)) this.numbering = numbering;
         if(!Objects.isNull(name)) this.name = name;
         if(!Objects.isNull(address)) this.address = address;
